@@ -1,0 +1,7 @@
+<div class="artist-grid">
+  <app-artist
+    *ngFor="let artist of artists"
+    (artistClicked)="clickArtist($event)"
+    [artist]="artist">
+  </app-artist>
+</div>

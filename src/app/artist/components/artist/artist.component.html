@@ -1,0 +1,30 @@
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      {{ artist.lastName | uppercase }}
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{ artist.lastName | currency }}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <div class="crop-image">
+    <img [src]="artist.image" alt="">
+  </div>
+
+    <mat-card-content>
+      <p>{{ artist.description | slice:0:10 }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="addCart()" mat-raised-button color="primary">Agregar al carrito</button>
+      <a mat-raised-button  [routerLink]="['/artists', artist.id]">Ver detalle</a>
+    </mat-card-actions>
+
+</mat-card>
+<!--
+<h3 appHighlight></h3>
+<img [src]="product.image" alt="">
+<strong></strong>
+
+<p>{{ today | date:'HH:mm' }}</p>-->
+

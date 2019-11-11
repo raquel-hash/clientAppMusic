@@ -1,0 +1,15 @@
+<div *ngIf="artist">
+  <div>
+    <img [src]="artist.image" alt="">
+  </div>
+  <div>
+    <ul>
+      <li>Nombre: {{ artist.firstName }}</li>
+      <li>Apellido: {{ artist.lastName }}</li>
+    </ul>
+    <p>{{ artist.description }}</p>
+  </div>
+  <button (click)="crearArtist()">Crear</button>
+  <button (click)="updateArtist()">Actulizar</button>
+  <button (click)="deleteArtist()">Eliminar</button>
+</div>
